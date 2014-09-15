@@ -1,0 +1,71 @@
+{
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": "",
+    "mesos_version": "0.20.0"
+  },
+
+  "builders": [{
+    "type": "amazon-ebs",
+    "ami_name": "mesos-{{user `mesos_version`}}-ubuntu-14.04_{{timestamp}}",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+
+    "region": "us-west-1",
+    "source_ami": "ami-73717d36",
+    "instance_type": "m1.medium",
+    "ami_groups": "all",
+
+    "ssh_username": "ubuntu",
+    "ssh_timeout": "10m",
+
+    "ami_regions": ["ap-northeast-1", "ap-southeast-1", "eu-west-1", "sa-east-1", "us-east-1", "ap-southeast-2", "us-west-2"]
+  }],
+
+  "provisioners": [{
+    "type": "shell",
+    "scripts": [
+      "scripts/common/update_upgrade.sh",
+      "scripts/aws/cgroup-bin.sh"
+    ],
+    "execute_command": "sudo sh '{{ .Path }}'"
+  },
+  {
+    "type": "chef-solo",
+    "cookbook_paths": ["./vendor-cookbooks/"],
+    "run_list": [
+      "apt",
+      "mesos",
+      "docker::cgroups",
+      "docker::aufs",
+      "docker::lxc",
+      "docker"
+    ],
+    "json": {
+      "mesos": {
+        "type": "mesosphere",
+        "version": "{{user `mesos_version`}}",
+        "mesosphere": {
+          "with_zookeeper": true
+        }
+      }
+    },
+    "prevent_sudo": false,
+    "skip_install": false
+  },
+  {
+    "type": "shell",
+    "scripts": [
+      "scripts/common/install_marathon.sh",
+      "scripts/common/install_chronos.sh"
+    ],
+    "execute_command": "sudo sh '{{ .Path }}'"
+  }],
+
+  "post-processors": [
+  {
+    "type": "vagrant",
+    "output": "build/mesos-{{user `mesos_version`}}_ubuntu-14.04_{{.Provider}}_{{timestamp}}.box",
+    "keep_input_artifact": true
+  }]
+}
