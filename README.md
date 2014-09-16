@@ -22,12 +22,25 @@ Both templates will bake a virtual machine image and vagrant box containing:
 ## Hosted Images
 Do you want to save time to bake these boxes by yourself!?  Yes! Images baked by these templates are uploaded on the web.
 
-* VirtualBox:
-  * to be uploaded
-* AWS:
-  * to be uploaded.
-* [Vagrant Cloud](https://vagrantcloud.com/):
-  * to be uploaded
+### VirtualBox Image
+* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.1.ova) (1.3G)
+
+### AWS
+AMI IDs for each regions are bellows:
+
+| region name | region code | AMI ID |
+|:------------|:------------|:-------|
+| EU(Ireland) | `eu-west-1` | `ami-ee57f399` |
+| US East(N.Virginia) | `us-east-1` | `ami-9a50fff2` |
+| US West(N.California) | `us-west-1` | `ami-71c7ce34` |
+| US West(Oregon) | `us-west-2` | `ami-5d0f4f6d` |
+| South America (São Paulo) | `sa-east-1` | `ami-f3b319ee` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-d11c30d0` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-742d0926` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-210e6d1b` |
+
+### Vagrant Cloud
+* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)
 
 ## How to bake
 ### Pre-requisites
