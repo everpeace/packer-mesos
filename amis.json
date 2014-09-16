@@ -7,7 +7,10 @@
 
   "builders": [{
     "type": "amazon-ebs",
+
     "ami_name": "mesos-{{user `mesos_version`}}-ubuntu-14.04_amd64_{{timestamp}}",
+    "ami_description": "Ubuntu 14.04 LTS, Meosos, Docker, Marathon, Chronos, and Zookeeper.",
+
     "access_key": "{{user `aws_access_key`}}",
     "secret_key": "{{user `aws_secret_key`}}",
 
