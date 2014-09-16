@@ -23,7 +23,7 @@
     "iso_checksum": "ca2531b8cd79ea5b778ede3a524779b9",
     "iso_checksum_type": "md5",
 
-    "http_directory" : "./ubuntu",
+    "http_directory" : "./http/ubuntu-14.04",
     "http_port_min" : 9001,
     "http_port_max" : 9001,
     "boot_command" : [

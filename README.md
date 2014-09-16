@@ -1,13 +1,12 @@
 # Packer Templates for Mesos
-__Bake your own mesos pre-installed images!!__  This contains packer templates for building mesos pre-installed images.  This also outputs vagrant boxes.
+__Bake your own mesos pre-installed images!!__  This contains packer templates for building mesos pre-installed images based on Ubuntu 14.04 LTS 64 bit.  This also outputs vagrant boxes.
 
-* `virtualbox.json`: building virtualbox image(`.ova`) and vagrant box file(`.box`) for virtualbox provider.
-* `amis.json`: building AMIs and vagrant box(`.box`) for aws provider.
+* `ubuntu-14.04.json`: building virtualbox image(`.ova`) and vagrant box file(`.box`) for virtualbox provider.
+* `ubuntu-14.04-amis.json`: building AMIs and vagrant box(`.box`) for aws provider.
 
 ## What's inside.
 Both templates will bake a virtual machine image and vagrant box containing:
 
-* OS: Ubuntu 14.04 LTS 64-bit
 * Mesos 0.20.0 (by Mesosphere's package)
   * _`mesos-{master|slave}` will not be started at bootup. But, `mesos-{master|slave}` service was registered.  So, you can start them manually by `# start mesos-{master| slave}`_
   * Please see the links for how to configure `mesos-{master|slave}`
