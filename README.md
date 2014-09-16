@@ -42,6 +42,8 @@ AMI IDs for each regions are bellows:
 ### Vagrant Cloud
 * [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)
 
+Please see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box.
+
 ## How to bake
 ### Pre-requisites
 You need [berkshelf](http://berkshelf.com) and some cookbooks which these templates depends on and have to be placed in `vendor-cookbooks` directory.  You can install berkshelf with bundler and install dependencies with it:
