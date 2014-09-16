@@ -12,7 +12,7 @@
     "guest_os_type": "Ubuntu_64",
     "headless": true,
 
-    "vm_name": "mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{timestamp}}",
+    "vm_name": "mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_0.20.0.1",
     "disk_size": 40960,
     "vboxmanage": [
       [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
@@ -104,7 +104,7 @@
   "post-processors": [
   {
     "type": "vagrant",
-    "output": "build/mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{.Provider}}_{{timestamp}}.box",
+    "output": "build/mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{.Provider}}_0.20.0.1.box",
     "keep_input_artifact": true
   }]
 }
