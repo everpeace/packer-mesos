@@ -66,8 +66,8 @@ This build is done automatically (but it will take about 10 -15 minitutes), whic
 
 If it went well, you can see
 
-* `build/mesos-0.20.0_ubuntu-14.04_amd64_virtualbox_<timestamp>.ova`
-* `build/mesos-0.20.0_ubuntu-14.04_amd64_virtualbox_<timestamp>.box`
+* `build/mesos-0.20.0_ubuntu-14.04_amd64_virtualbox_<build_version>.ova`
+* `build/mesos-0.20.0_ubuntu-14.04_amd64_virtualbox_<build_version>.box`
 
 
 Then,
@@ -75,7 +75,7 @@ Then,
 * you can add this box to your vagrant:
 
   ```
-  $ vagrant box add -name mesos-0.20.0-vbox mesos-0.20.0_ubuntu-14.04_virtualbox_<timestamp>.box
+  $ vagrant box add -name mesos-0.20.0-vbox mesos-0.20.0_ubuntu-14.04_virtualbox_<build_version>.box
   ```
 * you can import `.ova` file to your virtualbox.
 
@@ -94,10 +94,10 @@ This build is done automatically (but it will take about 10 -15 minitutes), whic
   * _you can control this `"ami_regions"` clause in the template_
 * make them public.
 
-If it went well, you can see `build/mesos-0.20.0_ubuntu-14.04_aws_<timestamp>.box`.
+If it went well, you can see `build/mesos-0.20.0_ubuntu-14.04_aws_<build_version>.box`.
 
 Then, you can add this box to your vagrant
 
 ```
-$ vagrant box add -name mesos-0.20.0-aws mesos-0.20.0_ubuntu-14.04_aws_<timestamp>.box
+$ vagrant box add -name mesos-0.20.0-aws mesos-0.20.0_ubuntu-14.04_aws_<build_version>.box
 ```
