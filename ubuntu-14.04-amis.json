@@ -2,7 +2,9 @@
   "variables": {
     "aws_access_key": "",
     "aws_secret_key": "",
-    "mesos_version": "0.20.0"
+    "mesos_version": "0.20.0",
+    "marathon_version": "0.7.0-RC3",
+    "chronos_version": "2.1.0_mesos-0.14.0-rc4",
   },
 
   "builders": [{
@@ -58,11 +60,16 @@
   },
   {
     "type": "shell",
+
+    "environment_vars": [
+      "MARATHON_VERSION={{user `marathon_version`}}",
+      "CHRONOS_VERSION={{user `chronos_version`}}"
+    ],
     "scripts": [
       "scripts/common/install_marathon.sh",
       "scripts/common/install_chronos.sh"
     ],
-    "execute_command": "sudo sh '{{ .Path }}'"
+    "execute_command": "{{ .Vars }} sudo -E sh '{{ .Path }}'"
   }],
 
   "post-processors": [
