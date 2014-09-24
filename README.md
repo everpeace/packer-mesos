@@ -13,7 +13,7 @@ Both templates will bake a virtual machine image and vagrant box containing:
     * [Mesos Master Configuration](http://mesosphere.io/docs/mesos/deep-dive/mesos-master/)
     * [Mesos Slave Configuration](http://mesosphere.io/docs/mesos/deep-dive/mesos-slave/)
   * Or, you can use [`cookbook-mesos`](https://github.com/everpeace/cookbook-mesos) to configure them.
-* Marathon 0.7.0-RC4 (in /opt/marathon-`marathon_version`)
+* Marathon 0.7.0 (in /opt/marathon-`marathon_version`)
     * [Setting Up Agin Running Marathon](https://mesosphere.github.io/marathon/docs/)
 * Chronos 2.1.0 (in /opt/chronos)
   * [Configuring Chronos](https://github.com/mesosphere/chronos#configuring-chronos)
@@ -23,23 +23,24 @@ Do you want to save time to bake these boxes by yourself!?  Yes! Images baked by
 
 Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
 
-### Latest Build Version: 0.20.0.2
+### Latest Build Version: 0.20.0.3
+
 #### VirtualBox Image
-* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.2.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.2.ova) (1.3G)
+* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova) (1.3G)
 
 #### AWS
 AMI IDs for each regions are bellows:
 
 | region name | region code | AMI ID |
 |:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-bc298ecb` |
-| US East(N.Virginia) | `us-east-1` | `ami-7e832b16` |
-| US West(N.California) | `us-west-1` | `ami-b3464ef6` |
-| US West(Oregon) | `us-west-2` | `ami-89cd8db9` |
-| South America (São Paulo) | `sa-east-1` | `ami-414be15c` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-c9b897c8` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-42c2e610` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-25583b1f` |
+| EU(Ireland) | `eu-west-1` | `ami-5c5dfb2b` |
+| US East(N.Virginia) | `us-east-1` | `ami-2499334c` |
+| US West(N.California) | `us-west-1` | `ami-53383016` |
+| US West(Oregon) | `us-west-2` | `ami-8d5417bd` |
+| South America (São Paulo) | `sa-east-1` | `ami-913a908c` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-27785126` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-e48aaeb6` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-e19efddb` |
 
 #### Vagrant Cloud
 * [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
@@ -105,6 +106,31 @@ $ vagrant box add -name mesos-0.20.0-aws mesos-0.20.0_ubuntu-14.04_aws_<build_ve
 
 ## Old Hosted Images
 Versioning: Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
+
+### Build Version: 0.20.0.2
+* Mesos 0.20.0
+* Marathon 0.7.0-RC4
+* Chronos 2.1.0
+
+#### VirtualBox Image
+* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.2.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.2.ova) (1.3G)
+
+#### AWS
+AMI IDs for each regions are bellows:
+
+| region name | region code | AMI ID |
+|:------------|:------------|:-------|
+| EU(Ireland) | `eu-west-1` | `ami-bc298ecb` |
+| US East(N.Virginia) | `us-east-1` | `ami-7e832b16` |
+| US West(N.California) | `us-west-1` | `ami-b3464ef6` |
+| US West(Oregon) | `us-west-2` | `ami-89cd8db9` |
+| South America (São Paulo) | `sa-east-1` | `ami-414be15c` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-c9b897c8` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-42c2e610` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-25583b1f` |
+
+#### Vagrant Cloud
+* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
 
 ### Build Version: 0.20.0.1
 * Mesos 0.20.0
