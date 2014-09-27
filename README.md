@@ -7,15 +7,15 @@ __Bake your own mesos pre-installed images!!__  This contains packer templates f
 ## What's inside.
 Both templates will bake a virtual machine image and vagrant box containing:
 
-* Mesos 0.20.0 (by Mesosphere's package)
+* Mesos (by Mesosphere's package)
   * _`mesos-{master|slave}` will not be started at bootup. But, `mesos-{master|slave}` service was registered.  So, you can start them manually by `# start mesos-{master| slave}`_
   * Please see the links for how to configure `mesos-{master|slave}`
     * [Mesos Master Configuration](http://mesosphere.io/docs/mesos/deep-dive/mesos-master/)
     * [Mesos Slave Configuration](http://mesosphere.io/docs/mesos/deep-dive/mesos-slave/)
   * Or, you can use [`cookbook-mesos`](https://github.com/everpeace/cookbook-mesos) to configure them.
-* Marathon 0.7.0 (in /opt/marathon-`marathon_version`)
+* Marathon (in /opt/marathon)
     * [Setting Up Agin Running Marathon](https://mesosphere.github.io/marathon/docs/)
-* Chronos 2.1.0 (in /opt/chronos)
+* Chronos(in /opt/chronos)
   * [Configuring Chronos](https://github.com/mesosphere/chronos#configuring-chronos)
 
 ## Hosted Images
@@ -23,24 +23,27 @@ Do you want to save time to bake these boxes by yourself!?  Yes! Images baked by
 
 Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
 
-### Latest Build Version: 0.20.0.3
+### Latest Build Version: 0.20.1.1
+* Mesos 0.20.1
+* Marathon 0.7.1 (in `/opt/marathon`)
+* Chronos 2.1.0 (in `/opt/chronos`)
 
 #### VirtualBox Image
-* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova) (1.3G)
+* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.1.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.1.1.ova) (1.5GB)
 
 #### AWS
 AMI IDs for each regions are bellows:
 
 | region name | region code | AMI ID |
 |:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-5c5dfb2b` |
-| US East(N.Virginia) | `us-east-1` | `ami-2499334c` |
-| US West(N.California) | `us-west-1` | `ami-53383016` |
-| US West(Oregon) | `us-west-2` | `ami-8d5417bd` |
-| South America (São Paulo) | `sa-east-1` | `ami-913a908c` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-27785126` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-e48aaeb6` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-e19efddb` |
+| EU(Ireland) | `eu-west-1` | `ami-3a44e54d` |
+| US East(N.Virginia) | `us-east-1` | `ami-ac08bcc4` |
+| US West(N.California) | `us-west-1` | `ami-1d959d58` |
+| US West(Oregon) | `us-west-2` | `ami-f5f5b6c5` |
+| South America (São Paulo) | `sa-east-1` | `ami-d9f540c4` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-83456d82` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-b65a7de4` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-852240bf` |
 
 #### Vagrant Cloud
 * [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
@@ -106,6 +109,31 @@ $ vagrant box add -name mesos-0.20.0-aws mesos-0.20.0_ubuntu-14.04_aws_<build_ve
 
 ## Old Hosted Images
 Versioning: Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
+
+### Build Version: 0.20.0.3
+* Mesos 0.20.0
+* Marathon 0.7.0
+* Chronos 2.1.0
+
+#### VirtualBox Image
+* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova) (1.3G)
+
+#### AWS
+AMI IDs for each regions are bellows:
+
+| region name | region code | AMI ID |
+|:------------|:------------|:-------|
+| EU(Ireland) | `eu-west-1` | `ami-5c5dfb2b` |
+| US East(N.Virginia) | `us-east-1` | `ami-2499334c` |
+| US West(N.California) | `us-west-1` | `ami-53383016` |
+| US West(Oregon) | `us-west-2` | `ami-8d5417bd` |
+| South America (São Paulo) | `sa-east-1` | `ami-913a908c` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-27785126` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-e48aaeb6` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-e19efddb` |
+
+#### Vagrant Cloud
+* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
 
 ### Build Version: 0.20.0.2
 * Mesos 0.20.0
