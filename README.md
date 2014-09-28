@@ -29,7 +29,7 @@ Build version consits of two parts, the first 3 numbers stand for mesos_version,
 * Chronos 2.1.0 (in `/opt/chronos`)
 
 #### VirtualBox Image
-* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.1.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.1.1.ova) (1.5GB)
+* [mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova) (1.5GB)
 
 #### AWS
 AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.1`
