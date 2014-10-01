@@ -1,0 +1,115 @@
+{
+  "variables": {
+    "mirror": "http://mirrors.kernel.org/centos",
+    "ssh_name": "vagrant",
+    "ssh_pass": "vagrant",
+    "hostname": "ubuntu",
+    "mesos_version": "0.20.1",
+    "marathon_version": "0.7.1",
+    "chronos_version": "2.1.0_mesos-0.14.0-rc4",
+    "build_version": "{{ timestamp }}"
+  },
+
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "guest_os_type": "RedHat_64",
+      "headless": true,
+
+      "vm_name": "mesos-{{user `mesos_version`}}_centos-6.5_x86_64_virtualbox_{{user `build_version`}}",
+      "disk_size": 40960,
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
+        [ "modifyvm", "{{.Name}}", "--cpus",   "2"    ]
+      ],
+
+      "iso_url": "{{user `mirror`}}/6.5/isos/x86_64/CentOS-6.5-x86_64-bin-DVD1.iso",
+      "iso_checksum": "32c7695b97f7dcd1f59a77a71f64f2957dddf738",
+      "iso_checksum_type": "sha1",
+
+      "http_directory": "http",
+      "http_port_min" : 9001,
+      "http_port_max" : 9001,
+
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-6.5/ks.cfg<enter><wait>"
+      ],
+
+      "ssh_username": "{{user `ssh_name`}}",
+      "ssh_password": "{{user `ssh_pass`}}",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "60m",
+
+      "shutdown_command": "echo '{{user `ssh_pass`}}'|sudo -S /sbin/halt -h -p",
+
+      "output_directory": "build/centos-6.5_x86_64_virtualbox",
+      "format": "ova"
+    }
+  ],
+
+
+  "provisioners": [{
+    "type": "shell",
+
+    "scripts": [
+      "scripts/centos/common/update.sh",
+      "scripts/centos/common/install-unzip.sh",
+      "scripts/centos/common/install-wget.sh",
+      "scripts/centos/common/install-curl.sh",
+      "scripts/centos/common/install-jre.sh",
+      "scripts/centos/virtualbox/install-dkms.sh",
+      "scripts/virtualbox/install_vbox_guest_additions.sh",
+      "scripts/virtualbox/sudoers_setup.sh",
+      "scripts/virtualbox/vagrant_ssh.sh"
+    ],
+    "execute_command": "echo '{{user `ssh_pass`}}' | sudo -S sh '{{ .Path }}'"
+  },
+  {
+    "type": "chef-solo",
+
+    "prevent_sudo": false,
+    "skip_install": false,
+
+    "cookbook_paths": ["./vendor-cookbooks/"],
+    "run_list": [
+      "mesos",
+      "docker::cgroups",
+      "docker::lxc",
+      "docker"
+    ],
+    "json": {
+      "mesos": {
+        "type": "mesosphere",
+        "version": "{{user `mesos_version`}}",
+        "mesosphere": {
+          "with_zookeeper": true
+        }
+      }
+    },
+
+    "execute_command": "echo '{{user `ssh_pass`}}' | {{if .Sudo}}sudo -S{{end}} chef-solo -c {{.ConfigPath}} -j {{.JsonPath}}",
+    "install_command": "echo '{{user `ssh_pass`}}' | {{if .Sudo}}sudo -S{{end}} bash -c 'curl -L https://www.opscode.com/chef/install.sh| bash -s'"
+  },
+  {
+    "type": "shell",
+
+    "environment_vars": [
+      "MARATHON_VERSION={{user `marathon_version`}}",
+      "CHRONOS_VERSION={{user `chronos_version`}}"
+    ],
+    "scripts": [
+      "scripts/common/install_marathon.sh",
+      "scripts/common/install_chronos.sh"
+    ],
+
+    "execute_command": "echo '{{user `ssh_pass`}}' | {{ .Vars }} sudo  -E -S sh '{{ .Path }}'"
+  }],
+
+
+  "post-processors": [
+  {
+    "type": "vagrant",
+    "output": "build/centos-6.5_x86_64_{{.Provider}}/mesos-{{user `mesos_version`}}_centos-6.5_x86_64_{{.Provider}}_{{user `build_version`}}.box",
+    "keep_input_artifact": true
+  }]
+}
