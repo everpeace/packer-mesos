@@ -15,7 +15,7 @@
     "guest_os_type": "Ubuntu_64",
     "headless": true,
 
-    "vm_name": "mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{user `build_version`}}",
+    "vm_name": "mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_virtualbox_{{user `build_version`}}",
     "disk_size": 40960,
     "vboxmanage": [
       [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
@@ -47,7 +47,7 @@
 
     "shutdown_command": "echo '{{user `ssh_pass`}}' | sudo -S shutdown -P now",
 
-    "output_directory": "build",
+    "output_directory": "build/ubuntu-14.04_amd64_virtualbox",
     "format": "ova"
   }],
 
@@ -56,11 +56,15 @@
     "type": "shell",
 
     "scripts": [
-      "scripts/common/update_upgrade.sh",
+      "scripts/ubuntu/common/update_upgrade.sh",
+      "scripts/ubuntu/common/install-unzip.sh",
+      "scripts/ubuntu/common/install-wget.sh",
+      "scripts/ubuntu/common/install-curl.sh",
+      "scripts/ubuntu/common/install-jre.sh",
+      "scripts/ubuntu/virtualbox/install-dkms.sh",
       "scripts/virtualbox/install_vbox_guest_additions.sh",
       "scripts/virtualbox/sudoers_setup.sh",
-      "scripts/virtualbox/vagrant_ssh.sh",
-      "scripts/virtualbox/curl.sh"
+      "scripts/virtualbox/vagrant_ssh.sh"
     ],
 
     "execute_command": "echo '{{user `ssh_pass`}}' | sudo -S sh '{{ .Path }}'"
@@ -111,7 +115,7 @@
   "post-processors": [
   {
     "type": "vagrant",
-    "output": "build/mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{.Provider}}_{{user `build_version`}}.box",
+    "output": "build/ubuntu-14.04_amd64_{{.Provider}}/mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{.Provider}}_{{user `build_version`}}.box",
     "keep_input_artifact": true
   }]
 }

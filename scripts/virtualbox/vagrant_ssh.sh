@@ -1,6 +1,5 @@
 #!/bin/bash
 
-apt-get install -y wget
 mkdir /home/vagrant/.ssh
 wget --no-check-certificate \
   'https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub' \

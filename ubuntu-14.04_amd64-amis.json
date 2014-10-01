@@ -31,8 +31,12 @@
   "provisioners": [{
     "type": "shell",
     "scripts": [
-      "scripts/common/update_upgrade.sh",
-      "scripts/aws/cgroup-bin.sh"
+      "scripts/ubuntu/common/update_upgrade.sh",
+      "scripts/ubuntu/common/install-unzip.sh",
+      "scripts/ubuntu/common/install-wget.sh",
+      "scripts/ubuntu/common/install-curl.sh",
+      "scripts/ubuntu/common/install-jre.sh",
+      "scripts/ubuntu/aws/install-cgroup-bin.sh"
     ],
     "execute_command": "sudo sh '{{ .Path }}'"
   },
@@ -76,7 +80,7 @@
   "post-processors": [
   {
     "type": "vagrant",
-    "output": "build/mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{.Provider}}_{{user `build_version`}}.box",
+    "output": "build/ubuntu-14.04_amd64_{{.Provider}}/mesos-{{user `mesos_version`}}_ubuntu-14.04_amd64_{{.Provider}}_{{user `build_version`}}.box",
     "keep_input_artifact": true
   }]
 }
