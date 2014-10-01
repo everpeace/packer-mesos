@@ -5,7 +5,7 @@ DEPENDENCIES
     revision: 8339a64aba7618d30e00db9721bb8e3faf453511
   mesos
     git: git://github.com/everpeace/cookbook-mesos.git
-    revision: aabafa02c7cee2f51e790a6f27115e5eb38ef48c
+    revision: 022ff7d949bbb50f8f49e57e22cea16f358fc3a5
 
 GRAPH
   7-zip (1.0.2)
@@ -53,7 +53,7 @@ GRAPH
   maven (1.1.0)
     ark (~> 0.4)
     java (~> 1.13)
-  mesos (0.2.0)
+  mesos (0.2.1)
     build-essential (>= 0.0.0)
     java (>= 0.0.0)
     maven (>= 0.0.0)
@@ -71,7 +71,7 @@ GRAPH
   sysctl (0.6.0)
     ohai (>= 0.0.0)
   ulimit (0.3.2)
-  windows (1.34.2)
+  windows (1.34.6)
     chef_handler (>= 0.0.0)
   yum (3.3.2)
   yum-epel (0.5.1)
