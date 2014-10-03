@@ -1,4 +1,5 @@
 # Packer Templates for Mesos
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/everpeace/packer-mesos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 __Bake your own mesos pre-installed images!!__  This contains packer templates for building mesos pre-installed images.  This also outputs vagrant boxes.
 
 * Ubuntu 14.04 LTS(amd64)
