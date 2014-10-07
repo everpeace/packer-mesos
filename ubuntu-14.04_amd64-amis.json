@@ -5,7 +5,7 @@
     "mesos_version": "0.20.1",
     "marathon_version": "0.7.3",
     "chronos_version": "2.1.0_mesos-0.14.0-rc4",
-    "build_version": "{{ timestamp }}"
+    "build_version": "0.20.1.2"
   },
 
   "builders": [{
