@@ -29,27 +29,27 @@ Do you want to save time to bake these boxes by yourself!?  Yes! Images baked by
 
 Build version consists of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
 
-### Latest Build Version: 0.20.1.1
+### Latest Build Version: 0.20.1.2
 * Mesos 0.20.1
-* Marathon 0.7.1 (in `/opt/marathon`)
+* Marathon 0.7.3 (in `/opt/marathon`)
 * Chronos 2.1.0 (in `/opt/chronos`)
 
 #### VirtualBox Image
-* [mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova) (1.5GB)
+* [mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova) (1.5GB)
 
 #### AWS
-AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.1`
+AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.2`
 
 | region name | region code | AMI ID |
 |:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-3a44e54d` |
-| US East(N.Virginia) | `us-east-1` | `ami-ac08bcc4` |
-| US West(N.California) | `us-west-1` | `ami-1d959d58` |
-| US West(Oregon) | `us-west-2` | `ami-f5f5b6c5` |
-| South America (São Paulo) | `sa-east-1` | `ami-d9f540c4` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-83456d82` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-b65a7de4` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-852240bf` |
+| EU(Ireland) | `eu-west-1` | `ami-5a9b392d` |
+| US East(N.Virginia) | `us-east-1` | `ami-28ab1640` |
+| US West(N.California) | `us-west-1` | `ami-af5e54ea` |
+| US West(Oregon) | `us-west-2` | `ami-319bd601` |
+| South America (São Paulo) | `sa-east-1` | `ami-1549fc08` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-ebb481ea` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-845670d6` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-2def8d17` |
 
 #### Vagrant Cloud
 * [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
@@ -115,6 +115,32 @@ $ vagrant box add --name mesos-0.20.0-aws mesos-0.20.0_ubuntu-14.04_aws_<build_v
 
 ## Old Hosted Images
 Versioning: Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
+
+### Build Version: 0.20.1.1
+* Mesos 0.20.1
+* Marathon 0.7.1 (in `/opt/marathon`)
+* Chronos 2.1.0 (in `/opt/chronos`)
+
+#### VirtualBox Image
+* [mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova) (1.5GB)
+
+#### AWS
+AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.1`
+
+| region name | region code | AMI ID |
+|:------------|:------------|:-------|
+| EU(Ireland) | `eu-west-1` | `ami-3a44e54d` |
+| US East(N.Virginia) | `us-east-1` | `ami-ac08bcc4` |
+| US West(N.California) | `us-west-1` | `ami-1d959d58` |
+| US West(Oregon) | `us-west-2` | `ami-f5f5b6c5` |
+| South America (São Paulo) | `sa-east-1` | `ami-d9f540c4` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-83456d82` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-b65a7de4` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-852240bf` |
+
+#### Vagrant Cloud
+* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
+
 
 ### Build Version: 0.20.0.3
 * Mesos 0.20.0
