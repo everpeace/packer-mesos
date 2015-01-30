@@ -18,7 +18,7 @@
     "secret_key": "{{user `aws_secret_key`}}",
 
     "region": "us-west-1",
-    "source_ami": "ami-8b3d33ce",
+    "source_ami": "ami-106bc567",
     "instance_type": "m1.medium",
     "ami_groups": "all",
 
