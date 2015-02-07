@@ -25,7 +25,7 @@
     "ssh_username": "root",
     "ssh_timeout": "10m",
 
-    "ami_regions": ["us-west-2", "us-east-1", "eu-west-1", "eu-central-1",  "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "sa-east-1"]
+    "ami_regions": ["us-west-2", "us-east-1", "eu-west-1",  "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "sa-east-1"]
   }],
 
   "provisioners": [{
