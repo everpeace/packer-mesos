@@ -27,29 +27,29 @@ __NOTE: Currently, ubuntu based images are only available.__
 
 Do you want to save time to bake these boxes by yourself!?  Yes! Images baked by these templates are uploaded on the web.
 
-Build version consists of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
+Build version consists of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.21.0.0`,this means mesos version is `0.21.0` and build version is `0`.
 
-### Latest Build Version: 0.20.1.2
-* Mesos 0.20.1
-* Marathon 0.7.3 (in `/opt/marathon`)
+### Latest Build Version: 0.21.0.0
+* Mesos 0.21.0
+* Marathon 0.8.0 (in `/opt/marathon`)
 * Chronos 2.1.0 (in `/opt/chronos`)
 
 #### VirtualBox Image
-* [mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova) (1.5GB)
+* [mesos-0.21.0_ubuntu-14.04_amd64_virtualbox_0.21.0.0.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.21.0_ubuntu-14.04_amd64_virtualbox_0.21.0.0.ova) (1.5GB)
 
 #### AWS
-AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.2`
+AMI Name: `mesos-0.21.0-ubuntu-14.04_amd64_0.21.0.0`
 
 | region name | region code | AMI ID |
 |:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-5a9b392d` |
-| US East(N.Virginia) | `us-east-1` | `ami-28ab1640` |
-| US West(N.California) | `us-west-1` | `ami-af5e54ea` |
-| US West(Oregon) | `us-west-2` | `ami-319bd601` |
-| South America (São Paulo) | `sa-east-1` | `ami-1549fc08` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-ebb481ea` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-845670d6` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-2def8d17` |
+| EU(Ireland) | `eu-west-1` | `ami-436ee734` |
+| US East(N.Virginia) | `us-east-1` | `ami-a4f2bdcc` |
+| US West(N.California) | `us-west-1` | `ami-ba362dff` |
+| US West(Oregon) | `us-west-2` | `ami-41520871` |
+| South America (São Paulo) | `sa-east-1` | `ami-4386395e` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-9b2cc99b` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-26596c74` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-7174034b` |
 
 #### Vagrant Cloud
 * [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
@@ -115,6 +115,32 @@ $ vagrant box add --name mesos-0.20.0-aws mesos-0.20.0_ubuntu-14.04_aws_<build_v
 
 ## Old Hosted Images
 Versioning: Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
+
+### Build Version 0.20.1.2
+* Mesos 0.20.1
+* Marathon 0.7.3 (in `/opt/marathon`)
+* Chronos 2.1.0 (in `/opt/chronos`)
+
+#### VirtualBox Image
+* [mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova) (1.5GB)
+
+#### AWS
+AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.2`
+
+| region name | region code | AMI ID |
+|:------------|:------------|:-------|
+| EU(Ireland) | `eu-west-1` | `ami-5a9b392d` |
+| US East(N.Virginia) | `us-east-1` | `ami-28ab1640` |
+| US West(N.California) | `us-west-1` | `ami-af5e54ea` |
+| US West(Oregon) | `us-west-2` | `ami-319bd601` |
+| South America (São Paulo) | `sa-east-1` | `ami-1549fc08` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-ebb481ea` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-845670d6` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-2def8d17` |
+
+#### Vagrant Cloud
+* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
+
 
 ### Build Version: 0.20.1.1
 * Mesos 0.20.1
