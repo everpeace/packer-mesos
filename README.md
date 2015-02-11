@@ -113,6 +113,12 @@ Then, you can add this box to your vagrant
 $ vagrant box add --name mesos-0.20.0-aws mesos-0.20.0_ubuntu-14.04_aws_<build_version>.box
 ```
 
+
+## License
+MIT License.  see [LICENSE.txt](LICENSE.txt)
+
+----
+
 ## Old Hosted Images
 Versioning: Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
 
