@@ -11,7 +11,7 @@
   "builders": [{
     "type": "amazon-ebs",
 
-    "ami_name": "mesos-{{user `mesos_version`}}-centos-6.5_x86_64_{{user `build_version`}}",
+    "ami_name": "mesos-{{user `mesos_version`}}-centos-6.5_x86_64_{{user `mesos_version`}}.{{user `build_version`}}",
     "ami_description": "CentOS 6.5(x86_64), Meosos {{user `mesos_version`}}, Docker, Marathon {{user `marathon_version`}}, Chronos {{user `chronos_version`}}, and Zookeeper.",
 
     "access_key": "{{user `aws_access_key`}}",
@@ -77,7 +77,7 @@
   "post-processors": [
   {
     "type": "vagrant",
-    "output": "build/centos-6.5_x86_64_{{.Provider}}/mesos-{{user `mesos_version`}}_centos-6.5_x86_64_{{.Provider}}_{{user `build_version`}}.box",
+    "output": "build/centos-6.5_x86_64_{{.Provider}}/mesos-{{user `mesos_version`}}_centos-6.5_x86_64_{{.Provider}}_{{user `mesos_version`}}.{{user `build_version`}}.box",
     "keep_input_artifact": true
   }]
 }

@@ -16,7 +16,7 @@
       "guest_os_type": "RedHat_64",
       "headless": true,
 
-      "vm_name": "mesos-{{user `mesos_version`}}_centos-6.5_x86_64_virtualbox_{{user `build_version`}}",
+      "vm_name": "mesos-{{user `mesos_version`}}_centos-6.5_x86_64_virtualbox_{{user `mesos_version`}}.{{user `build_version`}}",
       "disk_size": 40960,
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
@@ -109,7 +109,7 @@
   "post-processors": [
   {
     "type": "vagrant",
-    "output": "build/centos-6.5_x86_64_{{.Provider}}/mesos-{{user `mesos_version`}}_centos-6.5_x86_64_{{.Provider}}_{{user `build_version`}}.box",
+    "output": "build/centos-6.5_x86_64_{{.Provider}}/mesos-{{user `mesos_version`}}_centos-6.5_x86_64_{{.Provider}}_{{user `mesos_version`}}.{{user `build_version`}}.box",
     "keep_input_artifact": true
   }]
 }
