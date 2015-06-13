@@ -4,8 +4,8 @@
     "ssh_name": "vagrant",
     "ssh_pass": "vagrant",
     "hostname": "ubuntu",
-    "mesos_version": "0.21.0",
-    "marathon_version": "0.8.0",
+    "mesos_version": "0.22.1",
+    "marathon_version": "0.8.2",
     "chronos_version": "2.1.0_mesos-0.14.0-rc4",
     "build_version": "{{ timestamp }}"
   },
