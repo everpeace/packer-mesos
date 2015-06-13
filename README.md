@@ -29,27 +29,27 @@ Do you want to save time to bake these boxes by yourself!?  Yes! Images baked by
 
 Build version consists of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.21.0.0`,this means mesos version is `0.21.0` and build version is `0`.
 
-### Latest Build Version: 0.21.0.0
-* Mesos 0.21.0
-* Marathon 0.8.0 (in `/opt/marathon`)
+### Latest Build Version: 0.22.1.0
+* Mesos 0.22.1
+* Marathon 0.8.2 (in `/opt/marathon`)
 * Chronos 2.1.0 (in `/opt/chronos`)
 
 #### VirtualBox Image
-* [mesos-0.21.0_ubuntu-14.04_amd64_virtualbox_0.21.0.0.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.21.0_ubuntu-14.04_amd64_virtualbox_0.21.0.0.ova) (1.5GB)
+* [mesos-0.22.1_ubuntu-14.04_amd64_virtualbox_0.22.1.0.ova](https://onedrive.live.com/download?resid=2229046f52146cac!110&authkey=!AJECcZTnWQUXVH8&ithint=file%2cova ) (1.5GB)
 
 #### AWS
-AMI Name: `mesos-0.21.0-ubuntu-14.04_amd64_0.21.0.0`
+AMI Name: `mesos-0.22.1-ubuntu-14.04_amd64_0.22.1.0`
 
 | region name | region code | AMI ID |
 |:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-436ee734` |
-| US East(N.Virginia) | `us-east-1` | `ami-a4f2bdcc` |
-| US West(N.California) | `us-west-1` | `ami-ba362dff` |
-| US West(Oregon) | `us-west-2` | `ami-41520871` |
-| South America (São Paulo) | `sa-east-1` | `ami-4386395e` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-9b2cc99b` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-26596c74` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-7174034b` |
+| EU(Ireland) | `eu-west-1` | `ami-47b0c930` |
+| US East(N.Virginia) | `us-east-1` | `ami-51bb4d3a` |
+| US West(N.California) | `us-west-1` | `ami-35b24671` |
+| US West(Oregon) | `us-west-2` | `ami-41ebd071` |
+| South America (São Paulo) | `sa-east-1` | `ami-bd9e1da0` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-7e27ff7e` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-ca545198` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-e597ecdf` |
 
 #### Vagrant Cloud
 * [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
@@ -122,131 +122,27 @@ MIT License.  see [LICENSE.txt](LICENSE.txt)
 ## Old Hosted Images
 Versioning: Build version consits of two parts, the first 3 numbers stand for mesos_version, the last number stands for build number. For example `0.20.0.1`,this means mesos version is `0.20.0` and build version is `1`.
 
-### Build Version 0.20.1.2
-* Mesos 0.20.1
-* Marathon 0.7.3 (in `/opt/marathon`)
+### Build Version: 0.21.0.0
+* Mesos 0.21.0
+* Marathon 0.8.0 (in `/opt/marathon`)
 * Chronos 2.1.0 (in `/opt/chronos`)
 
 #### VirtualBox Image
-* [mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_virtualbox_0.20.1.2.ova) (1.5GB)
+* [mesos-0.21.0_ubuntu-14.04_amd64_virtualbox_0.21.0.0.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.21.0_ubuntu-14.04_amd64_virtualbox_0.21.0.0.ova) (1.5GB)
 
 #### AWS
-AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.2`
+AMI Name: `mesos-0.21.0-ubuntu-14.04_amd64_0.21.0.0`
 
 | region name | region code | AMI ID |
 |:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-5a9b392d` |
-| US East(N.Virginia) | `us-east-1` | `ami-28ab1640` |
-| US West(N.California) | `us-west-1` | `ami-af5e54ea` |
-| US West(Oregon) | `us-west-2` | `ami-319bd601` |
-| South America (São Paulo) | `sa-east-1` | `ami-1549fc08` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-ebb481ea` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-845670d6` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-2def8d17` |
+| EU(Ireland) | `eu-west-1` | `ami-436ee734` |
+| US East(N.Virginia) | `us-east-1` | `ami-a4f2bdcc` |
+| US West(N.California) | `us-west-1` | `ami-ba362dff` |
+| US West(Oregon) | `us-west-2` | `ami-41520871` |
+| South America (São Paulo) | `sa-east-1` | `ami-4386395e` |
+| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-9b2cc99b` |
+| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-26596c74` |
+| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-7174034b` |
 
 #### Vagrant Cloud
 * [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
-
-
-### Build Version: 0.20.1.1
-* Mesos 0.20.1
-* Marathon 0.7.1 (in `/opt/marathon`)
-* Chronos 2.1.0 (in `/opt/chronos`)
-
-#### VirtualBox Image
-* [mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.1_ubuntu-14.04_amd64_0.20.1.1.ova) (1.5GB)
-
-#### AWS
-AMI Name: `mesos-0.20.1-ubuntu-14.04_amd64_0.20.1.1`
-
-| region name | region code | AMI ID |
-|:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-3a44e54d` |
-| US East(N.Virginia) | `us-east-1` | `ami-ac08bcc4` |
-| US West(N.California) | `us-west-1` | `ami-1d959d58` |
-| US West(Oregon) | `us-west-2` | `ami-f5f5b6c5` |
-| South America (São Paulo) | `sa-east-1` | `ami-d9f540c4` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-83456d82` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-b65a7de4` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-852240bf` |
-
-#### Vagrant Cloud
-* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
-
-
-### Build Version: 0.20.0.3
-* Mesos 0.20.0
-* Marathon 0.7.0
-* Chronos 2.1.0
-
-#### VirtualBox Image
-* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.3.ova) (1.3G)
-
-#### AWS
-AMI IDs for each regions are bellows:
-
-| region name | region code | AMI ID |
-|:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-5c5dfb2b` |
-| US East(N.Virginia) | `us-east-1` | `ami-2499334c` |
-| US West(N.California) | `us-west-1` | `ami-53383016` |
-| US West(Oregon) | `us-west-2` | `ami-8d5417bd` |
-| South America (São Paulo) | `sa-east-1` | `ami-913a908c` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-27785126` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-e48aaeb6` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-e19efddb` |
-
-#### Vagrant Cloud
-* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
-
-### Build Version: 0.20.0.2
-* Mesos 0.20.0
-* Marathon 0.7.0-RC4
-* Chronos 2.1.0
-
-#### VirtualBox Image
-* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.2.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.2.ova) (1.3G)
-
-#### AWS
-AMI IDs for each regions are bellows:
-
-| region name | region code | AMI ID |
-|:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-bc298ecb` |
-| US East(N.Virginia) | `us-east-1` | `ami-7e832b16` |
-| US West(N.California) | `us-west-1` | `ami-b3464ef6` |
-| US West(Oregon) | `us-west-2` | `ami-89cd8db9` |
-| South America (São Paulo) | `sa-east-1` | `ami-414be15c` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-c9b897c8` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-42c2e610` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-25583b1f` |
-
-#### Vagrant Cloud
-* [/everpeace/mesos](https://vagrantcloud.com/everpeace/boxes/mesos)  (Please also see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box).
-
-### Build Version: 0.20.0.1
-* Mesos 0.20.0
-* Marathon 0.7.0-RC2
-* Chronos 2.1.0
-
-#### VirtualBox Image
-* [mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.1.ova](https://s3-us-west-1.amazonaws.com/everpeace-vagrant-mesos/mesos-0.20.0_ubuntu-14.04_amd64_0.20.0.1.ova) (1.3G)
-
-#### AWS
-AMI IDs for each regions are bellows:
-
-| region name | region code | AMI ID |
-|:------------|:------------|:-------|
-| EU(Ireland) | `eu-west-1` | `ami-ee57f399` |
-| US East(N.Virginia) | `us-east-1` | `ami-9a50fff2` |
-| US West(N.California) | `us-west-1` | `ami-71c7ce34` |
-| US West(Oregon) | `us-west-2` | `ami-5d0f4f6d` |
-| South America (São Paulo) | `sa-east-1` | `ami-f3b319ee` |
-| Asia Pacific (Tokyo) | `ap-northeast-1` | `ami-d11c30d0` |
-| Asia Pacific (Singapore)| `ap-southeast-1` | `ami-742d0926` |
-| Asia Pacific (Sydney) | `ap-southeast-2` | `ami-210e6d1b` |
-
-#### Vagrant Cloud
-* [/everpeace/mesos/0.20.0.1](https://vagrantcloud.com/everpeace/boxes/mesos/versions/1)
-
-Please see [vagrant-mesos](https://github.com/everpeace/vagrant-mesos) for how to use this box.
